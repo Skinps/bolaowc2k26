@@ -1,4 +1,124 @@
-const matches = [{"group": "A", "round": 1, "home": "México", "away": "Coreia do Sul"}, {"group": "A", "round": 1, "home": "África do Sul", "away": "República Tcheca"}, {"group": "A", "round": 2, "home": "México", "away": "África do Sul"}, {"group": "A", "round": 2, "home": "Coreia do Sul", "away": "República Tcheca"}, {"group": "A", "round": 3, "home": "México", "away": "República Tcheca"}, {"group": "A", "round": 3, "home": "África do Sul", "away": "Coreia do Sul"}, {"group": "B", "round": 1, "home": "Canadá", "away": "Suíça"}, {"group": "B", "round": 1, "home": "Bósnia e Herzegovina", "away": "Catar"}, {"group": "B", "round": 2, "home": "Canadá", "away": "Catar"}, {"group": "B", "round": 2, "home": "Bósnia e Herzegovina", "away": "Suíça"}, {"group": "B", "round": 3, "home": "Canadá", "away": "Bósnia e Herzegovina"}, {"group": "B", "round": 3, "home": "Catar", "away": "Suíça"}, {"group": "C", "round": 1, "home": "Brasil", "away": "Marrocos"}, {"group": "C", "round": 1, "home": "Haiti", "away": "Escócia"}, {"group": "C", "round": 2, "home": "Brasil", "away": "Escócia"}, {"group": "C", "round": 2, "home": "Marrocos", "away": "Haiti"}, {"group": "C", "round": 3, "home": "Brasil", "away": "Haiti"}, {"group": "C", "round": 3, "home": "Marrocos", "away": "Escócia"}, {"group": "D", "round": 1, "home": "Estados Unidos", "away": "Austrália"}, {"group": "D", "round": 1, "home": "Paraguai", "away": "Turquia"}, {"group": "D", "round": 2, "home": "Estados Unidos", "away": "Paraguai"}, {"group": "D", "round": 2, "home": "Austrália", "away": "Turquia"}, {"group": "D", "round": 3, "home": "Estados Unidos", "away": "Turquia"}, {"group": "D", "round": 3, "home": "Paraguai", "away": "Austrália"}, {"group": "E", "round": 1, "home": "Alemanha", "away": "Equador"}, {"group": "E", "round": 1, "home": "Curaçao", "away": "Costa do Marfim"}, {"group": "E", "round": 2, "home": "Alemanha", "away": "Costa do Marfim"}, {"group": "E", "round": 2, "home": "Curaçao", "away": "Equador"}, {"group": "E", "round": 3, "home": "Alemanha", "away": "Curaçao"}, {"group": "E", "round": 3, "home": "Costa do Marfim", "away": "Equador"}, {"group": "F", "round": 1, "home": "Holanda", "away": "Japão"}, {"group": "F", "round": 1, "home": "Suécia", "away": "Tunísia"}, {"group": "F", "round": 2, "home": "Holanda", "away": "Tunísia"}, {"group": "F", "round": 2, "home": "Japão", "away": "Suécia"}, {"group": "F", "round": 3, "home": "Holanda", "away": "Suécia"}, {"group": "F", "round": 3, "home": "Japão", "away": "Tunísia"}, {"group": "G", "round": 1, "home": "Bélgica", "away": "Irã"}, {"group": "G", "round": 1, "home": "Egito", "away": "Nova Zelândia"}, {"group": "G", "round": 2, "home": "Bélgica", "away": "Egito"}, {"group": "G", "round": 2, "home": "Irã", "away": "Nova Zelândia"}, {"group": "G", "round": 3, "home": "Bélgica", "away": "Nova Zelândia"}, {"group": "G", "round": 3, "home": "Egito", "away": "Irã"}, {"group": "H", "round": 1, "home": "Espanha", "away": "Uruguai"}, {"group": "H", "round": 1, "home": "Cabo Verde", "away": "Arábia Saudita"}, {"group": "H", "round": 2, "home": "Espanha", "away": "Arábia Saudita"}, {"group": "H", "round": 2, "home": "Cabo Verde", "away": "Uruguai"}, {"group": "H", "round": 3, "home": "Espanha", "away": "Cabo Verde"}, {"group": "H", "round": 3, "home": "Arábia Saudita", "away": "Uruguai"}, {"group": "I", "round": 1, "home": "França", "away": "Senegal"}, {"group": "I", "round": 1, "home": "Iraque", "away": "Noruega"}, {"group": "I", "round": 2, "home": "França", "away": "Noruega"}, {"group": "I", "round": 2, "home": "Senegal", "away": "Iraque"}, {"group": "I", "round": 3, "home": "França", "away": "Iraque"}, {"group": "I", "round": 3, "home": "Senegal", "away": "Noruega"}, {"group": "J", "round": 1, "home": "Argentina", "away": "Áustria"}, {"group": "J", "round": 1, "home": "Argélia", "away": "Jordânia"}, {"group": "J", "round": 2, "home": "Argentina", "away": "Argélia"}, {"group": "J", "round": 2, "home": "Áustria", "away": "Jordânia"}, {"group": "J", "round": 3, "home": "Argentina", "away": "Jordânia"}, {"group": "J", "round": 3, "home": "Argélia", "away": "Áustria"}, {"group": "K", "round": 1, "home": "Portugal", "away": "Colômbia"}, {"group": "K", "round": 1, "home": "RD Congo", "away": "Uzbequistão"}, {"group": "K", "round": 2, "home": "Portugal", "away": "Uzbequistão"}, {"group": "K", "round": 2, "home": "RD Congo", "away": "Colômbia"}, {"group": "K", "round": 3, "home": "Portugal", "away": "RD Congo"}, {"group": "K", "round": 3, "home": "Uzbequistão", "away": "Colômbia"}, {"group": "L", "round": 1, "home": "Inglaterra", "away": "Croácia"}, {"group": "L", "round": 1, "home": "Gana", "away": "Panamá"}, {"group": "L", "round": 2, "home": "Inglaterra", "away": "Panamá"}, {"group": "L", "round": 2, "home": "Croácia", "away": "Gana"}, {"group": "L", "round": 3, "home": "Inglaterra", "away": "Gana"}, {"group": "L", "round": 3, "home": "Croácia", "away": "Panamá"}];
+const matches = [
+  // GRUPO A - Rodada 1 (11/06)
+  {"group": "A", "round": 1, "home": "México", "away": "África do Sul"},
+  {"group": "A", "round": 1, "home": "Coreia do Sul", "away": "República Tcheca"},
+  // GRUPO A - Rodada 2 (18/06)
+  {"group": "A", "round": 2, "home": "República Tcheca", "away": "África do Sul"},
+  {"group": "A", "round": 2, "home": "México", "away": "Coreia do Sul"},
+  // GRUPO A - Rodada 3 (24/06)
+  {"group": "A", "round": 3, "home": "República Tcheca", "away": "México"},
+  {"group": "A", "round": 3, "home": "África do Sul", "away": "Coreia do Sul"},
+
+  // GRUPO B - Rodada 1 (12-13/06)
+  {"group": "B", "round": 1, "home": "Canadá", "away": "Bósnia e Herzegovina"},
+  {"group": "B", "round": 1, "home": "Catar", "away": "Suíça"},
+  // GRUPO B - Rodada 2 (18/06)
+  {"group": "B", "round": 2, "home": "Suíça", "away": "Bósnia e Herzegovina"},
+  {"group": "B", "round": 2, "home": "Canadá", "away": "Catar"},
+  // GRUPO B - Rodada 3 (24/06)
+  {"group": "B", "round": 3, "home": "Suíça", "away": "Canadá"},
+  {"group": "B", "round": 3, "home": "Bósnia e Herzegovina", "away": "Catar"},
+
+  // GRUPO C - Rodada 1 (13/06)
+  {"group": "C", "round": 1, "home": "Brasil", "away": "Marrocos"},
+  {"group": "C", "round": 1, "home": "Haiti", "away": "Escócia"},
+  // GRUPO C - Rodada 2 (19/06)
+  {"group": "C", "round": 2, "home": "Escócia", "away": "Marrocos"},
+  {"group": "C", "round": 2, "home": "Brasil", "away": "Haiti"},
+  // GRUPO C - Rodada 3 (24/06)
+  {"group": "C", "round": 3, "home": "Escócia", "away": "Brasil"},
+  {"group": "C", "round": 3, "home": "Marrocos", "away": "Haiti"},
+
+  // GRUPO D - Rodada 1 (12-13/06)
+  {"group": "D", "round": 1, "home": "Estados Unidos", "away": "Paraguai"},
+  {"group": "D", "round": 1, "home": "Austrália", "away": "Turquia"},
+  // GRUPO D - Rodada 2 (19/06)
+  {"group": "D", "round": 2, "home": "Estados Unidos", "away": "Austrália"},
+  {"group": "D", "round": 2, "home": "Turquia", "away": "Paraguai"},
+  // GRUPO D - Rodada 3 (25/06)
+  {"group": "D", "round": 3, "home": "Turquia", "away": "Estados Unidos"},
+  {"group": "D", "round": 3, "home": "Paraguai", "away": "Austrália"},
+
+  // GRUPO E - Rodada 1 (14/06)
+  {"group": "E", "round": 1, "home": "Alemanha", "away": "Curaçao"},
+  {"group": "E", "round": 1, "home": "Costa do Marfim", "away": "Equador"},
+  // GRUPO E - Rodada 2 (20/06)
+  {"group": "E", "round": 2, "home": "Alemanha", "away": "Costa do Marfim"},
+  {"group": "E", "round": 2, "home": "Equador", "away": "Curaçao"},
+  // GRUPO E - Rodada 3 (25/06)
+  {"group": "E", "round": 3, "home": "Equador", "away": "Alemanha"},
+  {"group": "E", "round": 3, "home": "Curaçao", "away": "Costa do Marfim"},
+
+  // GRUPO F - Rodada 1 (14/06)
+  {"group": "F", "round": 1, "home": "Holanda", "away": "Japão"},
+  {"group": "F", "round": 1, "home": "Suécia", "away": "Tunísia"},
+  // GRUPO F - Rodada 2 (20/06)
+  {"group": "F", "round": 2, "home": "Holanda", "away": "Suécia"},
+  {"group": "F", "round": 2, "home": "Tunísia", "away": "Japão"},
+  // GRUPO F - Rodada 3 (25/06)
+  {"group": "F", "round": 3, "home": "Japão", "away": "Suécia"},
+  {"group": "F", "round": 3, "home": "Tunísia", "away": "Holanda"},
+
+  // GRUPO G - Rodada 1 (15/06)
+  {"group": "G", "round": 1, "home": "Bélgica", "away": "Egito"},
+  {"group": "G", "round": 1, "home": "Irã", "away": "Nova Zelândia"},
+  // GRUPO G - Rodada 2 (21/06)
+  {"group": "G", "round": 2, "home": "Bélgica", "away": "Irã"},
+  {"group": "G", "round": 2, "home": "Nova Zelândia", "away": "Egito"},
+  // GRUPO G - Rodada 3 (26/06)
+  {"group": "G", "round": 3, "home": "Nova Zelândia", "away": "Bélgica"},
+  {"group": "G", "round": 3, "home": "Egito", "away": "Irã"},
+
+  // GRUPO H - Rodada 1 (15/06)
+  {"group": "H", "round": 1, "home": "Espanha", "away": "Cabo Verde"},
+  {"group": "H", "round": 1, "home": "Arábia Saudita", "away": "Uruguai"},
+  // GRUPO H - Rodada 2 (21/06)
+  {"group": "H", "round": 2, "home": "Espanha", "away": "Arábia Saudita"},
+  {"group": "H", "round": 2, "home": "Uruguai", "away": "Cabo Verde"},
+  // GRUPO H - Rodada 3 (26/06)
+  {"group": "H", "round": 3, "home": "Cabo Verde", "away": "Arábia Saudita"},
+  {"group": "H", "round": 3, "home": "Uruguai", "away": "Espanha"},
+
+  // GRUPO I - Rodada 1 (16/06)
+  {"group": "I", "round": 1, "home": "França", "away": "Senegal"},
+  {"group": "I", "round": 1, "home": "Iraque", "away": "Noruega"},
+  // GRUPO I - Rodada 2 (22/06)
+  {"group": "I", "round": 2, "home": "França", "away": "Iraque"},
+  {"group": "I", "round": 2, "home": "Noruega", "away": "Senegal"},
+  // GRUPO I - Rodada 3 (26/06)
+  {"group": "I", "round": 3, "home": "Noruega", "away": "França"},
+  {"group": "I", "round": 3, "home": "Senegal", "away": "Iraque"},
+
+  // GRUPO J - Rodada 1 (16-17/06)
+  {"group": "J", "round": 1, "home": "Argentina", "away": "Argélia"},
+  {"group": "J", "round": 1, "home": "Áustria", "away": "Jordânia"},
+  // GRUPO J - Rodada 2 (22/06)
+  {"group": "J", "round": 2, "home": "Argentina", "away": "Áustria"},
+  {"group": "J", "round": 2, "home": "Jordânia", "away": "Argélia"},
+  // GRUPO J - Rodada 3 (27/06)
+  {"group": "J", "round": 3, "home": "Argélia", "away": "Áustria"},
+  {"group": "J", "round": 3, "home": "Jordânia", "away": "Argentina"},
+
+  // GRUPO K - Rodada 1 (17/06)
+  {"group": "K", "round": 1, "home": "Portugal", "away": "RD Congo"},
+  {"group": "K", "round": 1, "home": "Uzbequistão", "away": "Colômbia"},
+  // GRUPO K - Rodada 2 (23/06)
+  {"group": "K", "round": 2, "home": "Portugal", "away": "Uzbequistão"},
+  {"group": "K", "round": 2, "home": "Colômbia", "away": "RD Congo"},
+  // GRUPO K - Rodada 3 (27/06)
+  {"group": "K", "round": 3, "home": "Colômbia", "away": "Portugal"},
+  {"group": "K", "round": 3, "home": "RD Congo", "away": "Uzbequistão"},
+
+  // GRUPO L - Rodada 1 (17/06)
+  {"group": "L", "round": 1, "home": "Inglaterra", "away": "Croácia"},
+  {"group": "L", "round": 1, "home": "Gana", "away": "Panamá"},
+  // GRUPO L - Rodada 2 (23/06)
+  {"group": "L", "round": 2, "home": "Inglaterra", "away": "Gana"},
+  {"group": "L", "round": 2, "home": "Panamá", "away": "Croácia"},
+  // GRUPO L - Rodada 3 (27/06)
+  {"group": "L", "round": 3, "home": "Panamá", "away": "Inglaterra"},
+  {"group": "L", "round": 3, "home": "Croácia", "away": "Gana"}
+];
 
 const countryCodes = {
   "México": "mx", "África do Sul": "za", "Coreia do Sul": "kr", "República Tcheca": "cz",
@@ -327,16 +447,6 @@ document.getElementById('clearAll').addEventListener('click', () => {
   if (!confirm('Deseja limpar todos os palpites desta sessão?')) return;
   predictions = {};
   render();
-});
-
-document.getElementById('exportBtn').addEventListener('click', () => {
-  const data = { predictions, officialResults, participants };
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'palpites-copa-2026.json';
-  a.click();
-  URL.revokeObjectURL(a.href);
 });
 
 (function () {
