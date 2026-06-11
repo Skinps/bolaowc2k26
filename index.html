@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolão Copa 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <div class="logo" style="margin: 0 auto 18px;">26</div>
+      <h1 style="text-align:center;margin:0 0 6px;">Bolão Copa 2026</h1>
+      <p style="text-align:center;color:var(--muted);margin:0 0 24px;">Entre com seu nome de usuário para participar</p>
+      <input id="usernameInput" type="text" maxlength="24" placeholder="Seu nome (ex: João Silva)" class="username-input" />
+      <button id="enterBtn" class="btn-primary" style="width:100%;margin-top:12px;padding:14px;">Entrar no Bolão ⚽</button>
+      <p id="loginError" style="color:var(--danger);font-size:.88rem;margin-top:10px;text-align:center;display:none;">Digite um nome válido.</p>
+    </div>
+  </div>
+
+  <!-- APP PRINCIPAL -->
+  <div id="mainApp" style="display:none;">
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo">26</div>
+          <div>
+            <h1>Bolão Copa 2026</h1>
+            <div class="subtitle" id="welcomeMsg"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="btn-secondary theme-toggle" data-theme-toggle aria-label="Alternar tema">🌙</button>
+          <button class="btn-secondary" id="clearAll">Limpar palpites</button>
+          <button class="btn-nav" id="openRankingBtn">🏅 Classificação</button>
+          <button class="btn-nav" id="openGaleraBtn">👥 Palpites da Galera</button>
+          <button class="btn-results" id="openResultsBtn">🏆 Resultados Oficiais</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="card stat-card"><div class="stat-label">Total de jogos</div><div class="stat-value" id="totalGames">0</div></div>
+        <div class="card stat-card"><div class="stat-label">Meus palpites salvos</div><div class="stat-value" id="savedGames">0</div></div>
+        <div class="card stat-card"><div class="stat-label">Progresso</div><div class="stat-value" id="progressText">0%</div></div>
+        <div class="card stat-card"><div class="stat-label">Resultados oficiais</div><div class="stat-value" id="officialCount">0</div></div>
+      </div>
+
+      <div class="scoreboard" id="scoreboard">
+        <div class="scoreboard-title">🏅 Classificação</div>
+        <div class="scoreboard-grid" id="scoreboardGrid"></div>
+      </div>
+
+      <div id="app"></div>
+      <div class="footer-note"><strong>Pontuação:</strong> 3 pts para placar exato · 1 pt para acertar vencedor/empate. Palpites salvos automaticamente na nuvem.</div>
+    </div>
+  </div>
+
+  <!-- MODAL: Resultados Oficiais -->
+  <div class="modal-overlay" id="resultsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">🏆 Resultados Oficiais</h2>
+        <button class="modal-close" id="closeResultsModal">✕</button>
+      </div>
+      <p class="modal-desc"><strong>3 pts</strong> para placar exato · <strong>1 pt</strong> para acertar vencedor/empate.</p>
+      <div id="officialMatchList"></div>
+      <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+        <button class="btn-primary" id="saveResults" style="flex:1;">💾 Salvar Resultados</button>
+        <button class="btn-secondary" id="clearResults">🗑 Limpar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Classificação -->
+  <div class="modal-overlay" id="rankingModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">🏅 Classificação</h2>
+        <button class="modal-close" id="closeRankingModal">✕</button>
+      </div>
+      <div id="rankingList"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: Palpites da Galera -->
+  <div class="modal-overlay" id="galeraModal">
+    <div class="modal modal-wide">
+      <div class="modal-header">
+        <h2 class="modal-title">👥 Palpites da Galera</h2>
+        <button class="modal-close" id="closeGaleraModal">✕</button>
+      </div>
+      <p class="modal-desc">Veja os palpites de todos os participantes por jogo.</p>
+      <div id="galeraList"></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
